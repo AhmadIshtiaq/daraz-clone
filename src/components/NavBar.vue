@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-sm bg-light pb-5">
+  <nav class="navbar navbar-expand-sm bg-light">
     <div class="container-fluid justify-content-center">
       <ul class="navbar-nav align-items-center custom-nav">
         <li class="nav-item">
