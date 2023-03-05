@@ -20,7 +20,7 @@
 
     <div class="container">
       <div class="row prod-row">
-        <div class="col-3 mt-4" v-for="prod in searchedProducts" :key="prod.id">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-5" v-for="prod in searchedProducts" :key="prod.id">
           <div class="card">
             <img
               class="prod-img"
@@ -35,8 +35,8 @@
                 },
               }"
             >
-              <h5 class="prod-name">{{ prod.name.slice(0, 30) }}......</h5>
-              <h4 class="prod-name">Rs. {{ prod.price }}</h4>
+              <h5 class="prod-name px-3 py-2">{{ prod.name.slice(0, 30) }}......</h5>
+              <h4 class="prod-name px-3">Rs. {{ prod.price }}</h4>
               <!-- <svg
                 v-for="prod in prod.rating"
                 :key="prod"
@@ -52,8 +52,8 @@
                 />
               </svg> -->
             </router-link>
-            <button class="btn btn-secondary" @click="addToCart(prod)">
-              AddToCart
+            <button class="add-cart-btn mt-auto py-2" @click="addToCart(prod)">
+              Add to Cart
             </button>
             <!-- </router-link> -->
           </div>
@@ -97,42 +97,11 @@ function addToCart(prod) {
 .search-bar {
   width: 100%;
 }
-.prod-img {
-  height: 12rem;
-}
-.prod-row {
-  transform: translateY(-35%);
-}
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<style scoped>
 .banner-img {
   width: 100%;
   height: 444px;
 }
-.prod-name {
-  font-size: 14px;
-}
-.card {
-  transition: transform 0.2s;
-}
-.card:hover {
-  box-shadow: 0px 0px 5px 10px rgb(221 224 211 / 50%);
-  transform: scale(1.1);
-}
+
 /* h4 {
   text-decoration: none;
 } */
@@ -140,5 +109,37 @@ a {
   text-decoration: none;
   font-size: 14px;
   color: #000;
+}
+
+.prod-row {
+  /* transform: translateY(-35%); */
+  transform: translateY(-25vw);
+}
+.card {
+  height: 20rem;
+  transition: transform 0.2s;
+}
+.card:hover {
+  box-shadow: 0px 0px 5px 10px rgb(221 224 211 / 50%);
+  transform: scale(1.1);
+}
+.prod-img {
+  height: 12rem;
+}
+.prod-name{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+.add-cart-btn{
+  border: 1px solid #f57224;
+  background: #f57224;
+  color: #fff;
+  font-size: 16px;
+}
+.add-cart-btn:hover{
+  background: #d0611e;
+  color: #092fdb;
+  font-weight: 600;
 }
 </style>

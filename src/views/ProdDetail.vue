@@ -4,7 +4,7 @@
   <!-- <p>{{ prod.name }}</p> -->
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-6">
+      <div class="col-lg-6 col-12">
         <div class="card">
           <img
             class="img-fluid prod-img"
@@ -12,7 +12,7 @@
           />
         </div>
       </div>
-      <div class="col-6 border">
+      <div class="col-lg-6 col-12 border">
         <div class="card-detail mt-5">
           <h5>{{ product.name }}</h5>
           <h5 class="text-info">Rs. {{ product.price }}</h5>

@@ -5,20 +5,20 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-10">
+      <div class="col-lg-10 col-12">
         <div
           class="products"
           v-for="(prod, index) in getCartData.products"
           :key="prod.id"
         >
           <div class="row">
-            <div class="col-5">
+            <div class="col-lg-5 col-md-5 col-12">
               <img
                 class="img-fluid prod-img"
                 :src="require(`../assets/images/${prod.img}`)"
               />
             </div>
-            <div class="col-5">
+            <div class="col-lg-5 col-md-5 col-12">
               <h5>{{ prod.name }}</h5>
               <h3>Rs. {{ prod.price }}</h3>
               <!-- <div><i :class="prod.rating"></i>rating</div> -->
@@ -29,7 +29,7 @@
           </div>
         </div>
       </div>
-      <div class="col-2">
+      <div class="col-lg-2 col-12">
         <h4>Total Price ({{ getTotal }})</h4>
       </div>
     </div>
